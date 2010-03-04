@@ -1,0 +1,16 @@
+.DS_Store
+log/*.log
+tmp/**/*
+config/database.yml
+config/initializers/site_keys.rb
+db/*.sqlite3
+.idea
+.loadpath
+.project
+public/system/*
+db/test.sqlite3-journal
+app/stylesheets/.sass-cache/*
+webrat-*
+
+# put me back for deploy!
+#public/stylesheets/compiled/*
