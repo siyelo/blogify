@@ -1,0 +1,4 @@
+To copy a Blogify initializer & migration & partials to your Rails App, with some configuration values, just do:
+
+    script/generate blogify_install
+

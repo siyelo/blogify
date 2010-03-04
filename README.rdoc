@@ -29,13 +29,13 @@ Install the blogify gem:
 Configure gems inside your app:
 
   config.gem 'httparty'
-  config.gem 'glennr-posterous'
+  config.gem 'glennr-posterous', :lib => "posterous"
   config.gem 'rufus-scheduler'
-  config.gem 'siyelo-blogify'
+  config.gem 'siyelo-blogify', :lib => "blogify"
 
 Run the generator:
 
-	ruby script/generate blogify_install
+	ruby script/generate blogify
 
 And you're ready to go. The generator will install an initializer which describes ALL Blogify's configuration options, so be sure to take a look at it.
 

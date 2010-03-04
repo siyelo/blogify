@@ -11,6 +11,7 @@ public/system/*
 db/test.sqlite3-journal
 app/stylesheets/.sass-cache/*
 webrat-*
+pkg/*
 
 # put me back for deploy!
 #public/stylesheets/compiled/*

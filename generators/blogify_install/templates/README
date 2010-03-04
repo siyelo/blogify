@@ -3,7 +3,8 @@
 
 Some setup you must do manually if you haven't yet:
 
-  1. Ensure you have defined your Posterous user name in config/blogify.rb:
+  1. Ensure you have defined your Posterous user name in config/blogify.rb
 
+  2. Run rake db:migrate to create the BlogPosts table.
 
 ===============================================================================
