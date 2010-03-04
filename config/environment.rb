@@ -11,6 +11,9 @@ Rails::Initializer.run do |config|
   config.gem 'glennr-posterous', :source => 'http://gemcutter.org', :version => '>= 0.1.7', :lib => 'posterous'
   config.gem 'httparty', :version => '>=0.5.0'  #required by posterous
 
+  config.gem 'rufus-scheduler', :source =>  "http://gemcutter.org", :version => '>=2.0.3'
+
+
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.

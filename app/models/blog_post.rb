@@ -2,8 +2,8 @@ require 'posterous'
 
 class BlogPost < ActiveRecord::Base
 
-  cattr_accessor :cache_expiry
-  @@cache_expiry = 4.hours
+  cattr_accessor :default_posterous_user
+  @@default_posterous_user = nil
 
   cattr_accessor :read_timeout
   @@read_timeout = 5.seconds
@@ -17,7 +17,7 @@ class BlogPost < ActiveRecord::Base
   attr_accessible :title, :body, :url, :comment_count, :posted
 
 
-  def self.cache_posts( posterous_user, count = post_limit )
+  def self.cache_posts( posterous_user = default_posterous_user, count = post_limit )
     posts = self.read_posts( posterous_user, count)
     self.update_posts(posts)
   end

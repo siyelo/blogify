@@ -1,0 +1,15 @@
+- posts = []
+- posts = blog_posts if !blog_posts.nil?
+
+.blog_posts
+  - posts.each do |p|
+    - comment_count = p.comment_count.to_i
+    .post
+      .top
+        %p= link_to h(p.title), p.url
+      .body
+        %p= h(Sanitize.clean(p.body.first(300))) + "...  " + link_to("Read More", p.url)
+      .bottom
+        = link_to pluralize_if(comment_count,"comment"), p.url
+        %span= " | "
+        %span.gray= time_ago_in_words(p.posted) + " ago"
