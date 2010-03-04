@@ -71,3 +71,24 @@ You'll need to set up your rufus cron task to cache the relevant blog posts
 And the controller/views work pretty much the same
 
   @news_posts = NewsPost.find(:all, :limit => BLOG_POST_LIMIT)
+
+== TODO
+
+Please refer to TODO file.
+
+== Maintainers
+
+* Glenn Roberts
+
+== Contributors
+
+Check them in the CHANGELOG or do `git shortlog -s -n` in the cloned repository.
+
+== Bugs and Feedback
+
+If you discover any bugs or want to drop a line, feel free to create an issue on
+GitHub.
+
+http://github.com/siyelo/siyelo-blogify/issues
+
+MIT License. Copyright 2010. Siyelo Software CC. http://www.siyelo.com

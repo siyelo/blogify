@@ -1,5 +1,3 @@
-require 'posterous'
-
 class BlogPost < ActiveRecord::Base
 
   cattr_accessor :default_posterous_user

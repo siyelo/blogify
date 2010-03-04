@@ -6,5 +6,8 @@ Some setup you must do manually if you haven't yet:
   1. Ensure you have defined your Posterous user name in config/blogify.rb
 
   2. Run rake db:migrate to create the BlogPosts table.
+  
+Note: the initializer creates its own Rufus scheduler task - so if you have
+other Rufus tasks, you may want to consolidate them.
 
 ===============================================================================
