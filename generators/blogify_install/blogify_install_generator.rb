@@ -1,5 +1,5 @@
 
-class BlogifyInstallGenerator < Rails::Generator::NamedBase
+class BlogifyInstallGenerator < Rails::Generator::Base
 
   def manifest
     record do |m|
