@@ -35,7 +35,7 @@ Configure gems inside your app:
 
 Run the generator:
 
-	ruby script/generate blogify
+	ruby script/generate blogify_install
 
 And you're ready to go. The generator will install an initializer which describes ALL Blogify's configuration options, so be sure to take a look at it.
 
@@ -57,9 +57,9 @@ For convenience, some partials are included
 
 Blogify can also work with multiple Posterous blogs. The BlogPost model is compatible with STI, so all you need to do is subclass it. E.g. in app/models/news_post.rb
 
-
   def NewsPost < BlogPost
   ...
+  end
 
 You'll need to set up your rufus cron task to cache the relevant blog posts
 
