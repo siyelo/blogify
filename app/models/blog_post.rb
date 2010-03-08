@@ -38,7 +38,7 @@ class BlogPost < ActiveRecord::Base
         logger.warn("Error accessing Posterous blog: #{$!}")
       end
 
-      posts
+      posts.nil? ? [] : posts
     end
 
     def self.update_posts(posts)
