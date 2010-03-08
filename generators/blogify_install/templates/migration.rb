@@ -1,4 +1,4 @@
-class CreateBlogPosts < ActiveRecord::Migration
+class BlogifyCreateBlogPosts < ActiveRecord::Migration
   def self.up
     create_table :blog_posts do |t|
       t.string    :type
