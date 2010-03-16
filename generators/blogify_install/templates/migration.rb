@@ -3,6 +3,9 @@ class BlogifyCreateBlogPosts < ActiveRecord::Migration
     create_table :blog_posts do |t|
       t.string    :type
       t.string    :title
+      t.string    :author
+      t.string    :authorpic
+      t.integer   :views
       t.text      :body
       t.integer   :comment_count
       t.string    :url

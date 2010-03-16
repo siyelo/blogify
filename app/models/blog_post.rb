@@ -48,6 +48,9 @@ class BlogPost < ActiveRecord::Base
         posts.each do |p|
           b = self.new( :title          => p['title'],
                         :body           => p['body'],
+                        :author         => p['author'],
+                        :author_pic_url => p['authorpic'],
+                        :views          => p['views'],
                         :url            => p['link'],
                         :comment_count  => p['commentsCount'].to_i,
                         :posted         => p['date'].to_date)
