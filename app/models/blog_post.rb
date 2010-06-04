@@ -12,8 +12,7 @@ class BlogPost < ActiveRecord::Base
   cattr_accessor :debug
   @@debug = false
 
-  attr_accessible :title, :body, :url, :comment_count, :posted
-
+  attr_accessible :title, :body, :url, :comment_count, :posted, :author, :author_pic_url, :views
 
   def self.cache_posts( posterous_user = default_posterous_user, count = post_limit )
     posts = self.read_posts( posterous_user, count)

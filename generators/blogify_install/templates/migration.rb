@@ -4,7 +4,7 @@ class BlogifyCreateBlogPosts < ActiveRecord::Migration
       t.string    :type
       t.string    :title
       t.string    :author
-      t.string    :authorpic
+      t.string    :author_pic_url
       t.integer   :views
       t.text      :body
       t.integer   :comment_count
