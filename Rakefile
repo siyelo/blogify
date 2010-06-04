@@ -12,9 +12,9 @@ begin
     gem.email = "glenn.roberts@siyelo.com"
     gem.homepage = "http://github.com/siyelo/siyelo-blogify"
     gem.authors = ["Glenn Roberts"]
-    gem.add_development_dependency "glennr-posterous", ">= 0.1.7"
-    gem.add_development_dependency "httparty", '>=0.5.0'
-    gem.add_development_dependency 'rufus-scheduler', '>=2.0.3'
+    gem.add_dependency "glennr-posterous", ">= 0.1.7"
+    gem.add_dependency "httparty", '>=0.5.0'
+    gem.add_dependency 'rufus-scheduler', '>=2.0.3'
     gem.files =  FileList["[A-Z]*", "{app,config,generators,lib}/**/*", "init.rb"]
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end

@@ -2,54 +2,38 @@
 
 A Rails engine for embedding Posterous blog extracts
 
-== Dependencies
-
-Blogify needs;
-
-  glennr-posterous (may also work with the original posterous gem)
-  httparty (a requirement of the posterous gem)
-  rufus-scheduler (for caching the blog posts in the background)
-
 == Installation
-
-All gems are on gemcutter, so you need to add gemcutter to your sources if you havent yet:
-
-  sudo gem sources -a http://gemcutter.org/
-
-Install required gem if you dont already have them
-
-  sudo gem install httparty
-  sudo gem install glennr-posterous
-  sudo gem install rufus-scheduler
-
-Install the blogify gem:
-
-  sudo gem install siyelo-blogify
 
 Configure gems inside your app:
 
-  config.gem 'httparty'
-  config.gem 'glennr-posterous', :lib => "posterous"
-  config.gem 'rufus-scheduler'
   config.gem 'siyelo-blogify', :lib => "blogify"
 
-Run the generator:
+Then 
+  $ rake gems:install
+
+Or manually;
+
+  $ sudo gem install siyelo-blogify
+
+== Generator
+
+To set up your Rails project, run this generator:
 
 	ruby script/generate blogify_install
 
-And you're ready to go. The generator will install an initializer which describes ALL Blogify's configuration options, so be sure to take a look at it.
+This will install an initializer which describes ALL Blogify's configuration options, so be sure to take a look at it.
 
 == Basic Usage
 
-Once the rufus scheduler task is running, it will go off and cache your last N (BlogPost.post_limit) blog posts locally
+As part of the generator, you get an initializer that kicks off a Rufus task every N hours (see config/initializiers/blogify.rb). 
 
-Inside your relevant controller, all you need to do is read the cached posts from your database.
+Once the rufus scheduler task is running, it will go off and cache your last N (BlogPost.post_limit) blog posts locally.
+
+To display your posts, all you need to do is read the cached posts in your controller action.
 
   @blog_posts = BlogPost.find(:all, :limit => BLOG_POST_LIMIT)
 
-And render them in your view as you wish
-
-For convenience, some partials are included
+And render them in your view as you wish. For convenience, some view partials are included as examples;
 
   = render :partial => '/blog_posts/list', :locals => { :blog_posts => @news_posts }
 
